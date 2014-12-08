@@ -1,0 +1,53 @@
+
+
+/* DEFAULT STYLES */
+
+
+#zigcookie { z-index:999; display:none; }
+#zigcookie .outer { position:fixed; bottom:0; left:0; width:100%; padding:10px; }
+#zigcookie .inner { width:100%; max-width:960px; margin:0 auto; }
+#zigcookie p { text-align:center; margin:0; }
+#zigcookie a { text-decoration:none; color:#fff; }
+#zigcookie a:hover { text-decoration:underline; color:#fff; }
+#zigcookie span { cursor:pointer; }
+#zigcookie span:hover { text-decoration:underline; }
+
+
+/* OVERRIDES - POSITION */
+
+
+#zigcookie .top { bottom:auto; top:0; }
+
+
+/* OVERRIDES - COLOUR */
+
+
+#zigcookie .black { background:#000; color:#fff; }
+#zigcookie .darkgrey { background:#2b3d4f; color:#fff; }
+#zigcookie .midgrey { background:#7e8b8c; color:#fff; }
+#zigcookie .lightgrey { background:#d5dadc; color:#2b3d4f; }
+#zigcookie .white { background:#fff; color:#2b3d4f; }
+#zigcookie .red { background:#bf382a; color:#fff; }
+#zigcookie .orange { background:#d25300; color:#fff; }
+#zigcookie .yellow { background:#f29b11; color:#fff; }
+#zigcookie .aqua { background:#159f84; color:#fff; }
+#zigcookie .green { background:#26ad5f; color:#fff; }
+#zigcookie .blue { background:#287fb8; color:#fff; }
+#zigcookie .purple { background:#8d43ac; color:#fff; }
+
+
+#zigcookie .black a { color:#fff; }
+#zigcookie .darkgrey a { color:#fff; }
+#zigcookie .midgrey a { color:#fff; }
+#zigcookie .lightgrey a { color:#2b3d4f; }
+#zigcookie .white a { color:#2b3d4f; }
+#zigcookie .red a { color:#fff; }
+#zigcookie .orange a { color:#fff; }
+#zigcookie .yellow a { color:#fff; }
+#zigcookie .aqua a { color:#fff; }
+#zigcookie .green a { color:#fff; }
+#zigcookie .blue a { color:#fff; }
+#zigcookie .purple a { color:#fff; }
+
+
+/* EOF */
