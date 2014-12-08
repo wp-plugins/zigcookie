@@ -4,9 +4,9 @@ Donate link: http://www.zigpress.com/donations/
 Tags: cookie, cookies, cookie warning, cookie notice, accept cookies, cookie law, zig, zigpress
 Requires at least: 4.0
 Tested up to: 4.1
-Stable tag: 0.2
+Stable tag: 0.2.1
 
-ZigCookie allows your site to meet its legal obligations in the European Union by alerting visitors that cookies are used and informing them that by continuing to use the site, they accept that cookies will be used.
+ZigCookie allows your site to meet its legal obligations in the European Union by alerting visitors that cookies are used.
 
 == Description ==
 
@@ -27,6 +27,8 @@ Ask a question on the plugin's home page!
 
 == Changelog ==
 
+= 0.2.1 =
+* Minor tidying following approval and publication in the repository
 = 0.2 =
 * Made text content editable
 = 0.1 =
