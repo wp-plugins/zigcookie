@@ -3,17 +3,17 @@
 Plugin Name: ZigCookie
 Plugin URI: http://www.zigpress.com/plugins/zigcookie/
 Description: ZigCookie allows your site to meet its legal obligations in the European Union by alerting visitors that cookies are used.
-Version: 0.2.1
+Version: 0.2.2
 Author: ZigPress
 Requires at least: 4.0
-Tested up to: 4.1
+Tested up to: 4.1.1
 Author URI: http://www.zigpress.com/
 License: GPLv2
 */
 
 
 /*
-Copyright (c) 2014 ZigPress
+Copyright (c) 2014-2015 ZigPress
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
@@ -60,16 +60,16 @@ if (!class_exists('zigcookie')) {
 			$this->themes = array(
 				'black' => 'Black',
 				'darkgrey' => 'Dark Grey',
-				'midgrey' => 'Mid Grey',
+/* 				'midgrey' => 'Mid Grey', */
 				'lightgrey' => 'Light Grey',
 				'white' => 'White',
 				'red' => 'Red',
-				'orange' => 'Orange',
-				'yellow' => 'Yellow',
-				'aqua' => 'Aqua',
+/*				'orange' => 'Orange', */
+/*				'yellow' => 'Yellow', */
+/*				'aqua' => 'Aqua', */
 				'green' => 'Green',
 				'blue' => 'Blue',
-				'purple' => 'Purple',
+/* 				'purple' => 'Purple', */
 			);
 			$this->get_params();
 			$this->callback_url = preg_replace('/\?.*/', '', $_SERVER['REQUEST_URI']);
@@ -79,6 +79,9 @@ if (!class_exists('zigcookie')) {
 			add_action('admin_enqueue_scripts', array($this, 'action_admin_enqueue_scripts'));
 			add_action('admin_menu', array($this, 'action_admin_menu'));
 			add_filter('plugin_row_meta', array($this, 'filter_plugin_row_meta'), 10, 2 );
+			remove_filter('the_title', 'capital_P_dangit', 11);
+			remove_filter('the_content', 'capital_P_dangit', 11);
+			remove_filter('comment_text', 'capital_P_dangit', 31);
 			$this->options = get_option('zigcookie');
 		}
 	
@@ -213,10 +216,11 @@ if (!class_exists('zigcookie')) {
 			<th>Accept link text:</th>
 			<td><input class="large-text" type="text" name="accept" value="<?php echo @$this->options['accept'] ?>" /></td>
 			</tr>
-			<tr valign="top">
+<!--			<tr valign="top">
 			<th>Deactivation kills options:</th>
 			<td><input class="checkbox" type="checkbox" name="delete_options_next_deactivate" value="1" <?php if (@$this->options['delete_options_next_deactivate'] == 1) { echo('checked="checked"'); } ?> /> <span class="description">Remove stored options on next deactivation of this plugin</span></td>
 			</tr>
+-->
 			</table>
 			<p class="submit"><input type="submit" name="Submit" class="button-primary" value="Save Changes" /></p> 
 			</form>
@@ -243,7 +247,7 @@ if (!class_exists('zigcookie')) {
 			<tr><th><img class="icon floatRight" src="<?php echo $this->plugin_folder?>img/zp.png" />Brought to you by ZigPress</th></tr>
 			</thead>
 			<tr><td>
-			<p><a href="http://www.zigpress.com/">ZigPress</a> is engaged in WordPress consultancy, solutions and research. We have also released a number of free plugins to support the WordPress community.</p>
+			<p><a href="http://www.zigpress.com/">ZigPress</a> is engaged in WordPress consultancy, solutions and research. We have also released a number of free and commercial plugins to support the WordPress community.</p>
 			<p><a target="_blank" href="http://www.zigpress.com/plugins/zigcookie/"><img class="icon" src="<?php echo $this->plugin_folder?>img/zigcookie.png" alt="ZigCookie WordPress plugin by ZigPress" title="ZigCookie WordPress plugin by ZigPress" />&nbsp; ZigCookie page</a></p>
 			<p><a target="_blank" href="http://www.zigpress.com/plugins/"><img class="icon" src="<?php echo $this->plugin_folder?>img/plugin.png" alt="WordPress plugins by ZigPress" title="WordPress plugins by ZigPress" />&nbsp; Other ZigPress plugins</a></p>
 			<p><a target="_blank" href="http://www.facebook.com/zigpress"><img class="icon" src="<?php echo $this->plugin_folder?>img/facebook.png" alt="ZigPress on Facebook" title="ZigPress on Facebook" />&nbsp; ZigPress on Facebook</a></p>
