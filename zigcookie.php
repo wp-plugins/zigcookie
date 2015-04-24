@@ -3,10 +3,10 @@
 Plugin Name: ZigCookie
 Plugin URI: http://www.zigpress.com/plugins/zigcookie/
 Description: ZigCookie allows your site to meet its legal obligations in the European Union by alerting visitors that cookies are used.
-Version: 0.2.2
+Version: 0.2.3
 Author: ZigPress
 Requires at least: 4.0
-Tested up to: 4.1.1
+Tested up to: 4.2
 Author URI: http://www.zigpress.com/
 License: GPLv2
 */
@@ -55,7 +55,7 @@ if (!class_exists('zigcookie')) {
 			$this->plugin_folder = get_bloginfo('wpurl') . '/' . PLUGINDIR . '/' . dirname(plugin_basename(__FILE__)) . '/';
 			$this->plugin_directory = WP_PLUGIN_DIR . '/' . dirname(plugin_basename(__FILE__)) . '/';
 			global $wp_version;
-			if (version_compare(phpversion(), '5.2.4', '<')) wp_die('ZigCookie requires PHP 5.2.4 or newer. Please update your server.'); 
+			if (version_compare(phpversion(), '5.3', '<')) wp_die('ZigCookie requires PHP 5.3 or newer. Please update your server.');
 			if (version_compare($wp_version, '4.0', '<')) wp_die('ZigCookie requires WordPress 4.0 or newer. Please update your installation.'); 
 			$this->themes = array(
 				'black' => 'Black',
