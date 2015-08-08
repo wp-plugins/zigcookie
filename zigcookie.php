@@ -3,10 +3,10 @@
 Plugin Name: ZigCookie
 Plugin URI: http://www.zigpress.com/plugins/zigcookie/
 Description: ZigCookie allows your site to meet its legal obligations in the European Union by alerting visitors that cookies are used.
-Version: 0.2.4
+Version: 0.2.5
 Author: ZigPress
 Requires at least: 4.0
-Tested up to: 4.2
+Tested up to: 4.3
 Author URI: http://www.zigpress.com/
 License: GPLv2
 */
